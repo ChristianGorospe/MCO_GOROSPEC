@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Feature Page</h1>
+        <nav>
+            <ul>
+                <li><a href="Portfolio.html">Homepage</a></li>
+                <li><a href="feature.html">Feature Page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="assets/logo.jpeg" alt="Feature Logo" class="feature-logo">
+            <div>
+                <h2>Featured Products</h2>
+                <p>Make your shopping meaningful.</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="product-grid">
+            <h3>Our Products</h3>
+            <div class="grid">
+                <div class="product-card">
+                    <img src="assets/jordan1.webp" alt="Jordan 1">
+                    <h4>Jordan 1 Low: Black & White</h4>
+                    <p>$25</p>
+                    <button onclick="addToCart('Jordan 1 Low: Black & White', 25)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/KobeVI.webp" alt="KobeVI">
+                    <h4>Kobe VI: Grinch</h4>
+                    <p>$80</p>
+                    <button onclick="addToCart('Kobe VI: Grinch', 80)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/KobeVIRG.jpg" alt="Reverse Grinch">
+                    <h4>Kobe VI: Reverse Grinch</h4>
+                    <p>$80</p>
+                    <button onclick="addToCart('Kobe VI: Reverse Grinch', 80)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="assets/Anta Kai 2.webp" alt="Anta Kai 2">
+                    <h4>Anta Kai 2: Artist on the Court</h4>
+                    <p>$90</p>
+                    <button onclick="addToCart('Anta Kai 2: Artist on the Court', 90)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <aside class="cart">
+            <h3>Shopping Cart</h3>
+            <ul id="cart-list"></ul>
+            <p>Total: $<span id="total-price">0</span></p>
+            <button class="back-btn" onclick="goBack()">Back</button>
+            <button class="checkout-btn" id="checkout-btn" onclick="checkout()" style="display: none;">Checkout</button>
+        </aside>
+
+        <div id="receipt-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeReceipt()">&times;</span>
+                <h2>Receipt</h2>
+                <pre id="receipt-content"></pre>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gorospe Christian. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
